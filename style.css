@@ -259,8 +259,10 @@ h5 {
     padding: 24px;
     background-color: var(--secondary-clr);
     border-radius: 16px;
+    border-left: 16px solid var(--primary-clr);
     display: grid;
     grid-template-rows: 8fr 1fr;
+    box-shadow: 3px 3px 13px 5px rgba(0,0,0,0.1);
 }
 
 .card-actions {
@@ -300,14 +302,16 @@ h5 {
     border-radius: 16px;
     display: grid;
     align-items: center;
-}
-
-.announcement-card:first-child {
-
+    box-shadow: 3px 3px 13px 5px rgba(0,0,0,0.1);
 }
 
 .announcement-card>p {
-    margin: 0;
+    margin-top: 6px;
+}
+
+.ruler {
+    height: 1px;
+    background-color: var(--paragraph-txt-clr);
 }
 
 .misc-trending {
@@ -318,4 +322,5 @@ h5 {
 .trending-card-container {
     background-color: var(--secondary-clr);
     border-radius: 16px;
+    box-shadow: 3px 3px 13px 5px rgba(0,0,0,0.1);
 }
