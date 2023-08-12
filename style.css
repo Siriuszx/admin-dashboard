@@ -55,12 +55,13 @@ h3 {
 }
 
 .logo-icon {
+    width: 64px;
     justify-self: start;
     filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-    width: 64px;
 }
 
-.nav-pages, .nav-misc {
+.nav-pages,
+.nav-misc {
     margin: 50px 0;
     display: grid;
     grid-template-rows: repeat(6, 60px);
@@ -77,22 +78,145 @@ h3 {
 
 .page-link {
     color: var(--secondary-clr);
-    text-decoration: none;
     font-weight: 900;
     font-size: 1.5rem;
+    text-decoration: none;
 }
 
 .nav-icon {
-    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
     width: 32px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
 
 /* NAV END */
 
+/* HEADER START */
+
 .grid-header {
+    padding: 12px 36px;
     grid-area: header;
     background-color: var(--secondary-clr);
+
+    display: grid;
+    row-gap: 16px;
+    align-items: center;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'search-bar search-bar search-bar user-status'
+    'user-greet user-greet user-action user-action';
 }
+
+.search-bar {
+    grid-area: search-bar;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 48px 1fr;
+}
+
+#search-icon {
+    margin-right: 12px;
+    width: 32px;
+    height: 32px;
+    justify-self: start;
+}
+
+#search-bar-field {
+    width: clamp(200px, 100%, 100%);
+    height: 32px;
+    background-color: var(--main-bg-clr);
+    outline: none;
+    border: none;
+    border-radius: 12px;
+}
+
+.cur-user-status {
+    grid-area: user-status;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+.current-user-name {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.cur-user-greetings {
+    grid-area: user-greet;
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 8fr;
+    grid-template-areas: 
+    'pfp greeting'
+    'pfp user-alias';
+}
+
+.cur-user-pfp-greetings {
+    grid-area: pfp;
+    margin-right: 16px;
+    justify-self: end;
+}
+
+.greeting {
+    grid-area: greeting;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.cur-user-name {
+    grid-area: user-alias;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.cur-user-actions {
+    grid-area: user-action;
+}
+
+.header-icon {
+    width: 28px;
+    height: 28px;
+    justify-self: end;
+    margin-right: 16px;
+}
+
+.actions-btns {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.user-action-btn {
+    color: var(--nav-txt-clr);
+    font-size: 1rem;
+    font-weight: 700;
+    width: 140px;
+    height: 50px;
+    background-color: var(--primary-clr);
+    border: none;
+    border-radius: 36px;
+}
+
+.cur-user-pfp {
+    border-radius: 50%;
+}
+
+.mini-pfp {
+    width: 48px;
+}
+
+.big-pfp {
+    width: 64px;
+}
+
+/* HEADER END */
 
 .grid-main {
     grid-area: main;
