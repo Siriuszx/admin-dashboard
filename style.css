@@ -4,7 +4,7 @@
     --main-bg-clr: #e2e8f0;
     --accent-clr: #f0b429;
     --nav-txt-clr: #fff;
-    --paragraph-txt-clr: #bebebe;
+    --paragraph-txt-clr: #636363;
 }
 
 * {
@@ -16,7 +16,6 @@ body {
     margin: 0;
     padding: 0;
 
-    height: 100vh;
 
     display: grid;
     grid-template-rows: 1fr 5fr;
@@ -24,6 +23,10 @@ body {
     grid-template-areas:
         'nav header header'
         'nav main main';
+}
+
+p {
+    color: var(--paragraph-txt-clr);
 }
 
 ul {
@@ -37,6 +40,15 @@ li {
 h3 {
     font-size: 2rem;
     font-weight: 700;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    margin: 0;
+    font-size: 0.9rem;
 }
 
 /* NAV START */
@@ -102,9 +114,9 @@ h3 {
     align-items: center;
     grid-template-rows: 1fr 2fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-    'search-bar search-bar search-bar user-status'
-    'user-greet user-greet user-action user-action';
+    grid-template-areas:
+        'search-bar search-bar search-bar user-status'
+        'user-greet user-greet user-action user-action';
 }
 
 .search-bar {
@@ -150,9 +162,9 @@ h3 {
     align-items: center;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 8fr;
-    grid-template-areas: 
-    'pfp greeting'
-    'pfp user-alias';
+    grid-template-areas:
+        'pfp greeting'
+        'pfp user-alias';
 }
 
 .cur-user-pfp-greetings {
@@ -219,10 +231,91 @@ h3 {
 /* HEADER END */
 
 .grid-main {
+    padding: 24px;
     grid-area: main;
     background-color: var(--main-bg-clr);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.container-header {
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.projects-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 250px;
+    gap: 36px;
+}
+
+.card {
+    padding: 24px;
+    background-color: var(--secondary-clr);
+    border-radius: 16px;
+    display: grid;
+    grid-template-rows: 8fr 1fr;
+}
+
+.card-actions {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    column-gap: 12px;
+    justify-content: end;
+    align-items: center;
+    grid-template-columns: repeat(3, 50px);
+}
+
+.card-actions li {
+    display: grid;
+    justify-items: center;
+}
+
+.card-icon {
+    width: 28px;
+    height: 28px;
 }
 
 .grid-misc {
-    grid-area: aside;
+    padding-left: 24px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.anno-container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.anno-card-container {
+    padding: 24px;
+    background-color: var(--secondary-clr);
+    border-radius: 16px;
+    display: grid;
+    align-items: center;
+}
+
+.announcement-card:first-child {
+
+}
+
+.announcement-card>p {
+    margin: 0;
+}
+
+.misc-trending {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.trending-card-container {
+    background-color: var(--secondary-clr);
+    border-radius: 16px;
 }
