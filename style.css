@@ -6,36 +6,34 @@
 body {
     margin: 0;
     padding: 0;
-}
 
-.grid-container {
     width: 100vw;
     height: 100vh;
+
     display: grid;
     grid-template-rows: 1fr 5fr;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas: 
     'nav header header'
-    'nav main aside';
+    'nav main main';
 }
 
 .grid-nav {
     grid-area: nav;
-    border: 1px solid red;
+    background-color: #1992d4;
 }
 
 .grid-header {
     grid-area: header;
-    border: 1px solid red;
+    background-color: #fff;
 }
 
 .grid-main {
     grid-area: main;
-    border: 1px solid red;
+    background-color: #e2e8f0;
 }
 
-.grid-aside {
+.grid-misc {
     grid-area: aside;
-    border: 1px solid red;
 }
 
