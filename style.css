@@ -1,4 +1,13 @@
-* { 
+:root {
+    --primary-clr: #1992d4;
+    --secondary-clr: #fff;
+    --main-bg-clr: #e2e8f0;
+    --accent-clr: #f0b429;
+    --nav-txt-clr: #fff;
+    --paragraph-txt-clr: #bebebe;
+}
+
+* {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
@@ -7,33 +16,89 @@ body {
     margin: 0;
     padding: 0;
 
-    width: 100vw;
     height: 100vh;
 
     display: grid;
     grid-template-rows: 1fr 5fr;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-areas: 
-    'nav header header'
-    'nav main main';
+    grid-template-areas:
+        'nav header header'
+        'nav main main';
 }
+
+ul {
+    padding: 0 36px;
+}
+
+li {
+    list-style-type: none;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* NAV START */
 
 .grid-nav {
     grid-area: nav;
-    background-color: #1992d4;
+    color: var(--nav-txt-clr);
+    background-color: var(--primary-clr);
 }
+
+.nav-project-logo {
+    margin: 0 30px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 3fr;
+}
+
+.logo-icon {
+    justify-self: start;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    width: 64px;
+}
+
+.nav-pages, .nav-misc {
+    margin: 50px 0;
+    display: grid;
+    grid-template-rows: repeat(6, 60px);
+}
+
+.nav-li {
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 3fr;
+}
+
+.page-link {
+    color: var(--secondary-clr);
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.nav-icon {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    width: 32px;
+}
+
+/* NAV END */
 
 .grid-header {
     grid-area: header;
-    background-color: #fff;
+    background-color: var(--secondary-clr);
 }
 
 .grid-main {
     grid-area: main;
-    background-color: #e2e8f0;
+    background-color: var(--main-bg-clr);
 }
 
 .grid-misc {
     grid-area: aside;
 }
-
